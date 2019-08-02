@@ -46,8 +46,6 @@ tasks = [
 ]
 
 
-@app.route('/todo')
-
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 @swag_from('get_tasks.yml')
 def get_tasks():
