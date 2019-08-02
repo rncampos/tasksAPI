@@ -1,0 +1,21 @@
+This endpoint returns a task by ID
+---
+tags:
+  - todo APIs
+parameters:
+  - name: task_id
+    in: query
+    type: integer
+    required: true
+    description: id of the task
+  - name: done
+    in: query
+    type: bool
+    description: status of the task
+responses:
+  500:
+    description: "Something went wrong"
+  200:
+    description: "Successfully got info"
+    schema:
+      $ref: '#/definitions/Tasks'

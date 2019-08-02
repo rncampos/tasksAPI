@@ -1,0 +1,31 @@
+This endpoint adds a single task
+---
+tags:
+  - todo APIs
+parameters:
+  - name: title
+    in: query
+    type: string
+    required: true
+    description: the title of the task
+  - name: description
+    in: query
+    type: string
+    description: a short description of the task
+definitions:
+  Tasks_Post:
+    type: object
+    properties:
+      tasks:
+        type: array
+        items:
+          $ref: '#/definitions/Task'
+      status:
+        type: string
+responses:
+  500:
+    description: "Something went wrong"
+  200:
+    description: "Successfully introduced info"
+    schema:
+      $ref: '#/definitions/Tasks_Post'

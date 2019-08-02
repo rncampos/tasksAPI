@@ -1,0 +1,30 @@
+This endpoint returns a list of the tasks
+---
+tags:
+  - todo APIs
+definitions:
+  Tasks:
+    type: object
+    properties:
+      tasks:
+        type: array
+        items:
+          $ref: '#/definitions/Task'
+  Task:
+    type: object
+    properties:
+      id:
+        type: integer
+      title:
+        type: string
+      description:
+        type: string
+      done:
+        type: boolean
+responses:
+  500:
+    description: "Something went wrong"
+  200:
+    description: "Successfully got info"
+    schema:
+      $ref: '#/definitions/Tasks'
