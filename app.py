@@ -29,8 +29,8 @@ app.config['SWAGGER'] = {
     "version": "0.0.1"
   },
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
   ]
 }
 
